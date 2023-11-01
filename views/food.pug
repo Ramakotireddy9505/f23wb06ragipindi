@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  .container-fluid
+    .row
+      - for (let food of results)
+        .col-sm-2
+          h2= food.food_name
+          p Food Type: #{food.food_type}
+          p Origin: #{food.origin}
+          p Rating: #{food.rating}
